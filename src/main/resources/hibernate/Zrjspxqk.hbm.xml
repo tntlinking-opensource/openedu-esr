@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="org.pfw.framework.ywmk.domain.Zrjspxqk" table="t_ywmk_Zrjspxqk">
+		<comment>专任教师培训情况</comment>
+		<id name="id" type="java.lang.String">
+			<column name="ID" length="32" />
+			<generator class="uuid.hex" />
+		</id>
+		<property name="jgh" type="java.lang.String">
+			<column name="jgh" length="50">
+				<comment>教工号</comment>
+			</column>
+		</property>
+		<property name="xm" type="java.lang.String">
+			<column name="xm" length="50">
+				<comment>姓名</comment>
+			</column>
+		</property>
+		<property name="pxmc" type="java.lang.String">
+			<column name="pxmc" length="100">
+				<comment>培训名称</comment>
+			</column>
+		</property>
+		<property name="xueshi" type="java.lang.String">
+			<column name="xueshi" length="20">
+				<comment>学时</comment>
+			</column>
+		</property>
+		<many-to-one name="pxcc" class="org.pfw.framework.xtgl.domain.Dict">
+			<column name="pxcc" length="32">
+				<comment>培训层次:国家级等</comment>
+			</column>
+		</many-to-one>
+		<property name="pxny" type="java.lang.String">
+			<column name="pxny" length="20">
+				<comment>培训年月</comment>
+			</column>
+		</property>
+		<property name="sjnf" type="java.lang.String">
+			<column name="sjnf" length="10">
+				<comment>数据年份</comment>
+			</column>
+		</property>
+		<property name="bz" type="java.lang.String">
+			<column name="bz" length="100">
+				<comment>备注</comment>
+			</column>
+		</property>
+
+	</class>
+</hibernate-mapping>

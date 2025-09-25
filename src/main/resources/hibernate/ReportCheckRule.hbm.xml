@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping>
+    <class name="org.pfw.framework.ywmk.domain.ReportCheckRule" table="T_Config_ReportCheckRule">
+        <comment>报表校验规则</comment>
+        
+        <id name="id" type="java.lang.String">
+            <column name="ID" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        
+        <many-to-one name="reportinfo" class="org.pfw.framework.ywmk.domain.ReportInfo" fetch="select">
+            <column name="reportId" length="32"  >
+            	<comment>所属报表</comment>
+            </column>
+        </many-to-one>
+         
+    
+        
+        <property name="fenl" type="java.lang.String">
+            <column name="fenl" length="2">
+                <comment>分类 1教育部 2市教委 3区教育局 4其他</comment>
+            </column>
+        </property>
+         
+        <property name="jylx" type="java.lang.String">
+            <column name="jylx" length="2">
+                <comment>校验类型 1逻辑校验 2经验校验</comment>
+            </column>
+        </property>
+        
+        <property name="jylxmc" type="java.lang.String">
+            <column name="jylxmc" length="50">
+                <comment>校验类型细化名称:表内关系校验、表间关系校验、年度对比校验、局内部门数据校验</comment>
+            </column>
+        </property>
+         
+        <property name="jygz" type="java.lang.String">
+            <column name="jygz" length="1000">
+                <comment>校验规则 格式:表号1.行号,列号+表号2.行号,列号=表号3.行号,列号-表号4.行号,列号</comment>
+            </column>
+        </property>
+        
+        <property name="jygzsxgs" type="java.lang.String">
+            <column name="jygzsxgs" length="1000">
+                <comment>校验规则数学公式</comment>
+            </column>
+        </property>
+        
+        <property name="jygzsxgsdygx" type="java.lang.String">
+            <column name="jygzsxgsdygx" length="1000">
+                <comment>校验规则数学公式对应关系:表号.行号,列号:变量名;表号.行号,列号:变量名2;.....</comment>
+            </column>
+        </property>
+        
+        <property name="jygzhy" type="java.lang.String">
+            <column name="jygzhy" length="1000">
+                <comment>校验规则含义</comment>
+            </column>
+        </property>
+        
+        <property name="jwtabs" type="java.lang.String">
+            <column name="jwtabs" length="1000">
+                <comment>教委tab</comment>
+            </column>
+        </property>
+        
+        <property name="bz" type="java.lang.String">
+            <column name="bz" length="500">
+                <comment>备注</comment>
+            </column>
+        </property>
+         
+        <property name="sfyx" type="java.lang.String">
+            <column name="sfyx" length="1">
+                <comment>是否有效</comment>
+            </column>
+        </property>
+         
+        <property name="cjsj" type="java.lang.String">
+            <column name="cjsj" length="30">
+                <comment>创建时间</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

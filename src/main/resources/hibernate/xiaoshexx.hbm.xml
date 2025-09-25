@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="org.pfw.framework.ywmk.domain.Xiaoshexx" table="t_ywmk_Xiaoshexx">
+		<comment>校舍信息</comment>
+		<id name="id" type="java.lang.String">
+			<column name="ID" length="32" />
+			<generator class="uuid.hex" />
+		</id>
+
+		<property name="sjnf" type="java.lang.String">
+			<column name="sjnf" length="10">
+				<comment>数据年份</comment>
+			</column>
+		</property>
+		<property name="xsmc" type="java.lang.String">
+			<column name="xsmc" length="50">
+				<comment>校舍名称</comment>
+			</column>
+		</property>
+		<many-to-one name="ssxq" class="org.pfw.framework.ywmk.domain.Xxxq">
+			<column name="ssxq" length="32">
+				<comment>所属校区</comment>
+			</column>
+		</many-to-one>
+		<many-to-one name="syfx" class="org.pfw.framework.xtgl.domain.Dict">
+			<column name="syfx" length="32">
+				<comment>使用方向</comment>
+			</column>
+		</many-to-one>
+		<many-to-one name="syfxtwo" class="org.pfw.framework.ywmk.domain.DictTwo">
+			<column name="syfxtwo" length="32">
+				<comment>使用方向(二级)</comment>
+			</column>
+		</many-to-one>
+		<many-to-one name="syfxthree" class="org.pfw.framework.ywmk.domain.DictThree">
+			<column name="syfxthree" length="32">
+				<comment>使用方向(三级)</comment>
+			</column>
+		</many-to-one>
+		<property name="xsmj" type="java.lang.String">
+			<column name="xsmj" length="10">
+				<comment>校舍面积</comment>
+			</column>
+		</property>
+		<property name="sfcjwf" type="java.lang.String">
+			<column name="sfcjwf" length="1">
+				<comment>是否c#危房</comment>
+			</column>
+		</property>
+		<property name="sfdjwf" type="java.lang.String">
+			<column name="sfdjwf" length="1">
+				<comment>是否d#危房</comment>
+			</column>
+		</property>
+		<property name="sfzywdw" type="java.lang.String">
+			<column name="sfzywdw" length="1">
+				<comment>是否租用外单位</comment>
+			</column>
+		</property>
+		<property name="sfbwdwzjy" type="java.lang.String">
+			<column name="sfbwdwzjy" length="1">
+				<comment>是否被外单位租(借)用</comment>
+			</column>
+		</property>
+		<property name="zjsylx" type="java.lang.String">
+			<column name="zjsylx" length="1">
+				<comment>职业教育使用--使用类型:独立使用,共同使用</comment>
+			</column>
+		</property>
+		
+		<property name="sfzzsg" type="java.lang.String">
+			<column name="sfzzsg" length="1">
+				<comment>是否正在施工  1：是  0：否</comment>
+			</column>
+		</property>
+		
+		<property name="sfycq" type="java.lang.String">
+			<column name="sfycq" length="1">
+				<comment>是否有产权  1：是  0：否</comment>
+			</column>
+		</property>
+		
+		<many-to-one name="dqzt" class="org.pfw.framework.xtgl.domain.Dict">
+			<column name="dqzt" length="32">
+				<comment>当前状态</comment>
+			</column>
+		</many-to-one>
+		<property name="bz" type="java.lang.String">
+			<column name="bz" length="100">
+				<comment>备注</comment>
+			</column>
+		</property>
+	</class>
+</hibernate-mapping>

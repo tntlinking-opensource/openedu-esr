@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="org.pfw.framework.ywmk.domain.Xxbbxx" table="t_ywmk_Xxbbxx">
+		<comment>学校报表数据</comment>
+		<id name="id" type="java.lang.String">
+			<column name="ID" length="32" />
+			<generator class="uuid.hex" />
+		</id> 
+		
+		<many-to-one name="sjrw" class="org.pfw.framework.ywmk.domain.Sjrw">
+			<column name="sjrw" length="32">
+				<comment>数据任务</comment>
+			</column>
+		</many-to-one> 
+		   
+		<property name="nianf" type="java.lang.String">
+			<column name="nianf" length="50">
+				<comment>数据年份</comment>
+			</column>
+		</property> 
+		 
+		<property name="reportcode" type="java.lang.String">
+			<column name="reportcode" length="100">
+				<comment>报表号</comment>
+			</column>
+		</property>
+		  
+		<property name="reportname" type="java.lang.String">
+			<column name="reportname" length="100">
+				<comment>报表名称</comment>
+			</column>
+		</property>
+		  
+		<property name="rptTable" type="java.lang.String">
+			<column name="rptTable" length="5000">
+				<comment>报表html</comment>
+			</column>
+		</property>
+		  
+		<property name="rptTableRes" type="java.lang.String">
+			<column name="rptTableRes" length="5000">
+				<comment>报表html结果</comment>
+			</column>
+		</property>
+		
+		<property name="yxh" type="java.lang.String">
+			<column name="yxh" length="100">
+				<comment>有效行</comment>
+			</column>
+		</property>
+		
+        <property name="columnNumber" type="java.lang.Integer">
+            <column name="columnNumber" length="2">
+                <comment>列数</comment>
+            </column>
+        </property>
+	</class>
+</hibernate-mapping>

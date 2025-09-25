@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="org.pfw.framework.ywmk.domain.Jzgxx" table="t_ywmk_jzgxx">
+		<comment>教职工信息</comment>
+		<id name="id" type="java.lang.String">
+			<column name="ID" length="32" />
+			<generator class="uuid.hex" />
+		</id>
+		<many-to-one name="ssxq" class="org.pfw.framework.ywmk.domain.Xxxq">
+			<column name="ssxq" length="32">
+				<comment>所属校区</comment>
+			</column>
+		</many-to-one>
+		<property name="jgh" type="java.lang.String">
+			<column name="jgh" length="50">
+				<comment>教工号</comment>
+			</column>
+		</property>
+		<property name="xm" type="java.lang.String">
+			<column name="xm" length="50">
+				<comment>姓名</comment>
+			</column>
+		</property>
+		<property name="xb" type="java.lang.String">
+			<column name="xb" length="1">
+				<comment>性别</comment>
+			</column>
+		</property>
+		<property name="csny" type="java.lang.String">
+			<column name="csny" length="20">
+				<comment>出生年月</comment>
+			</column>
+		</property>
+		<many-to-one name="mz" class="org.pfw.framework.xtgl.domain.Dict">
+			<column name="mz" length="32">
+				<comment>民族</comment>
+			</column>
+		</many-to-one>
+		<many-to-one name="zzmm" class="org.pfw.framework.xtgl.domain.Dict">
+			<column name="zzmm" length="32">
+				<comment>政治面貌</comment>
+			</column>
+		</many-to-one>
+
+		<property name="cjny" type="java.lang.String">
+			<column name="cjny" length="20">
+				<comment>从教年月</comment>
+			</column>
+		</property>
+		<property name="rxny" type="java.lang.String">
+			<column name="rxny" length="20">
+				<comment>入校年月</comment>
+			</column>
+		</property>
+		<many-to-one name="rylb" class="org.pfw.framework.xtgl.domain.Dict">
+			<column name="rylb" length="32">
+				<comment>人员类别</comment>
+			</column>
+		</many-to-one>
+		<many-to-one name="zhij" class="org.pfw.framework.xtgl.domain.Dict">
+			<column name="zhij" length="32">
+				<comment>职级</comment>
+			</column>
+		</many-to-one>
+		<property name="sfxzyz" type="java.lang.String">
+			<column name="sfxzyz" length="1">
+				<comment>是否校长/园长</comment>
+			</column>
+		</property>
+		<many-to-one name="xuel" class="org.pfw.framework.xtgl.domain.Dict">
+			<column name="xuel" length="32">
+				<comment>学历</comment>
+			</column>
+		</many-to-one>
+		<many-to-one name="xuew" class="org.pfw.framework.xtgl.domain.Dict">
+			<column name="xuew" length="32">
+				<comment>学位</comment>
+			</column>
+		</many-to-one>
+		<many-to-one name="ywjyrjkc" class="org.pfw.framework.xtgl.domain.Dict">
+			<column name="ywjyrjkc" length="32">
+				<comment>义务教育-任教课程</comment>
+			</column>
+		</many-to-one>
+		<property name="ywjyrjkcid" type="java.lang.String">
+			<column name="ywjyrjkcid" length="200">
+				<comment>义务教育-任教课程(多选)</comment>
+			</column>
+		</property>
+
+		<many-to-one name="gzjyrjkc" class="org.pfw.framework.xtgl.domain.Dict">
+			<column name="gzjyrjkc" length="32">
+				<comment>高中教育-人教课程</comment>
+			</column>
+		</many-to-one>
+		<many-to-one name="zyjyrjdl" class="org.pfw.framework.xtgl.domain.Dict">
+			<column name="zyjyrjdl" length="32">
+				<comment>职业教育-任教大类</comment>
+			</column>
+		</many-to-one>
+		
+		<property name="sfsxzdkjs" type="java.lang.String">
+			<column name="sfsxzdkjs" length="1">
+				<comment>是否实习指导课教师 1：是  2：否</comment>
+			</column>
+		</property>
+		
+		<property name="sfzb" type="java.lang.String">
+			<column name="sfzb" length="1">
+				<comment>是否在编</comment>
+			</column>
+		</property>
+		<property name="sfjsgzyjy" type="java.lang.String">
+			<column name="sfjsgzyjy" length="1">
+				<comment>是否接受过专业教育</comment>
+			</column>
+		</property>
+		<property name="sfxlzkjs" type="java.lang.String">
+			<column name="sfxlzkjs" length="1">
+				<comment>是否心里健康教育教师</comment>
+			</column>
+		</property>
+		<property name="sfss" type="java.lang.String">
+			<column name="sfss" length="1">
+				<comment>是否双师</comment>
+			</column>
+		</property>
+		<many-to-one name="dqzt" class="org.pfw.framework.xtgl.domain.Dict">
+			<column name="dqzt" length="32">
+				<comment>当前状态</comment>
+			</column>
+		</many-to-one>
+		<property name="sjnf" type="java.lang.String">
+			<column name="sjnf" length="10">
+				<comment>数据年份</comment>
+			</column>
+		</property>
+		<property name="sfxj" type="java.lang.String">
+			<column name="sfxj" length="1">
+				<comment>是否新进</comment>
+			</column>
+		</property>
+		<many-to-one name="xjlx" class="org.pfw.framework.xtgl.domain.Dict">
+			<column name="xjlx" length="32">
+				<comment>新进类型</comment>
+			</column>
+		</many-to-one>
+		<property name="sfyjbys" type="java.lang.String">
+			<column name="sfyjbys" length="1">
+				<comment>是否应届毕业生</comment>
+			</column>
+		</property>
+		<property name="sfsfs" type="java.lang.String">
+			<column name="sfsfs" length="1">
+				<comment>是否师范生</comment>
+			</column>
+		</property>
+		<property name="sfxdtz" type="java.lang.String">
+			<column name="sfxdtz" length="1">
+				<comment>是否学段调整</comment>
+			</column>
+		</property>
+		<many-to-one name="yxd" class="org.pfw.framework.xtgl.domain.Dict">
+			<column name="yxd" length="32">
+				<comment>原学段</comment>
+			</column>
+		</many-to-one>
+		<many-to-one name="xxd" class="org.pfw.framework.xtgl.domain.Dict">
+			<column name="xxd" length="32">
+				<comment>现学段</comment>
+			</column>
+		</many-to-one>
+		<property name="bz" type="java.lang.String">
+			<column name="bz" length="100">
+				<comment>备注</comment>
+			</column>
+		</property>
+		<property name="sfwxdr" type="java.lang.String">
+			<column name="sfwxdr" length="1">
+				<comment>是否外校调入</comment>
+			</column>
+		</property>
+		<many-to-one name="jig" class="org.pfw.framework.xtgl.domain.Dict">
+			<column name="jig" length="32">
+				<comment>籍贯</comment>
+			</column>
+		</many-to-one>
+		<property name="sfhq" type="java.lang.String">
+			<column name="sfhq" length="1">
+				<comment>是否华侨</comment>
+			</column>
+		</property>
+		<property name="sftjzrjs" type="java.lang.String">
+			<column name="sftjzrjs" length="1">
+				<comment>是否特教专任教师</comment>
+			</column>
+		</property>
+		<property name="bxnsfsk" type="java.lang.String">
+			<column name="bxnsfsk" length="1">
+				<comment>本学年是否授课(专任教师)</comment>
+			</column>
+		</property>
+		<property name="xxkm" type="java.lang.String">
+			<column name="xxkm" length="20">
+				<comment>任课课程的详细科目(二级)</comment>
+			</column>
+		</property>
+		
+		<property name="xued" type="java.lang.String">
+			<column name="xued" length="1">
+				<comment>学段  1：小学    2：初中   3：高中</comment>
+			</column>
+		</property>
+		
+		<set name="rjkcSet" table="T_YWMK_JZGXX_RJKC"  lazy="false">
+			<comment>任教课程表</comment>
+			<key>
+				<column name="JZGGXXID"><comment>教师id</comment></column>
+			</key>
+			<many-to-many class="org.pfw.framework.xtgl.domain.Dict">
+				<column name="RJKCID"><comment>任教课程ID</comment></column>
+			</many-to-many>
+		</set>
+		<property name="sfwyjs" type="java.lang.String">
+			<column name="sfwyjs" length="1">
+				<comment>是否外语教师</comment>
+			</column>
+		</property>
+		<property name="sfysjs" type="java.lang.String">
+			<column name="sfysjs" length="1">
+				<comment>是否艺术教师</comment>
+			</column>
+		</property>
+
+		<property name="jsfl" type="java.lang.String">
+			<column name="jsfl" length="1">
+				<comment>技术教师 分类  1：信息技术   2：通用技术</comment>
+			</column>
+		</property>
+	</class>
+</hibernate-mapping>
