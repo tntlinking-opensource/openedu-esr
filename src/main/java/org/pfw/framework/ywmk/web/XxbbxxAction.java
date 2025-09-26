@@ -86,7 +86,8 @@ public class XxbbxxAction extends CrudActionSupport<Xxbbxx> {
 	
 	
 	
-	private static String gjbbServerId = "http://localhost:8080/gjbb";
+//	private static String gjbbServerId = "http://localhost:8080/gjbb";
+	private static String gjbbServerId = "http://demo1.teacu.cn/gjbb";
 	
 	private List reqlist;
 	private String jsonstr;
