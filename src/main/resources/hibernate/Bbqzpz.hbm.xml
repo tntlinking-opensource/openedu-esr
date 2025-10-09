@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="org.pfw.framework.ywmk.domain.Bbqzpz" table="t_ywmk_Bbqzpz">
+		<comment>报表取值配置</comment>
+		<id name="id" type="java.lang.String">
+			<column name="ID" length="32" />
+			<generator class="uuid.hex" />
+		</id> 
+		<property name="nianf" type="java.lang.String">
+			<column name="nianf" length="50">
+				<comment>数据年份</comment>
+			</column>
+		</property>
+		 
+		<many-to-one name="bxlx" class="org.pfw.framework.xtgl.domain.Dict">
+			<column name="bxlx" length="32">
+				<comment>办学类型</comment>
+			</column>
+		</many-to-one>
+		 
+		<many-to-one name="reportInfo" class="org.pfw.framework.ywmk.domain.ReportInfo">
+			<column name="reportInfo" length="32">
+				<comment>所属报表</comment>
+			</column>
+		</many-to-one> 
+		
+		<property name="qzlx" type="java.lang.String">
+			<column name="qzlx" length="50">
+				<comment>取值类型  1:sql 取值   2：回调服务取值</comment>
+			</column>
+		</property>
+		 
+		<property name="sqlpz" type="java.lang.String">
+			<column name="sqlpz" length="5000">
+				<comment>sql</comment>
+			</column>
+		</property>
+		
+		<property name="hdfw" type="java.lang.String">
+			<column name="hdfw" length="100">
+				<comment>回调服务</comment>
+			</column>
+		</property>
+		
+		<property name="sfyx" type="java.lang.String">
+			<column name="sfyx" length="100">
+				<comment>是否有效  0无效 1有效</comment>
+			</column>
+		</property>
+	</class>
+</hibernate-mapping>

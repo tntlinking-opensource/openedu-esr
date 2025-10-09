@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="org.pfw.framework.ywmk.domain.Zyxx" table="t_ywmk_Zyxx">
+		<comment>专业信息</comment>
+		<id name="id" type="java.lang.String">
+			<column name="ID" length="32" />
+			<generator class="uuid.hex" />
+		</id>
+		<property name="zydm" type="java.lang.String">
+			<column name="zydm" length="50">
+				<comment>专业代码</comment>
+			</column>
+		</property>
+		<property name="zymc" type="java.lang.String">
+			<column name="zymc" length="100">
+				<comment>专业名称</comment>
+			</column>
+		</property>
+		<property name="zzzymc" type="java.lang.String">
+			<column name="zzzymc" length="100">
+				<comment>自主专业名称</comment>
+			</column>
+		</property>
+		<property name="nzhi" type="java.lang.String">
+			<column name="nzhi" length="10">
+				<comment>年制</comment>
+			</column>
+		</property>
+		<property name="xzlx" type="java.lang.String">
+			<column name="xzlx" length="10">
+				<comment>学制类型</comment>
+			</column>
+		</property>
+		<property name="sfyx" type="java.lang.String">
+			<column name="sfyx" length="1">
+				<comment>是否有效</comment>
+			</column>
+		</property>
+		<property name="bz" type="java.lang.String">
+			<column name="bz" length="100">
+				<comment>备注</comment>
+			</column>
+		</property>
+	</class>
+</hibernate-mapping>

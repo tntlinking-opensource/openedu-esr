@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="org.pfw.framework.ywmk.domain.Xxxq" table="t_ywmk_xxxq">
+		<comment>校区信息</comment>
+		<id name="id" type="java.lang.String">
+			<column name="ID" length="32" />
+			<generator class="uuid.hex" />
+		</id>
+		<many-to-one name="ssxx" class="org.pfw.framework.ywmk.domain.Xxxx">
+			<column name="ssxx" length="32">
+				<comment>所属学校</comment>
+			</column>
+		</many-to-one>
+		<property name="xqdm" type="java.lang.String">
+			<column name="xqdm" length="50">
+				<comment>校区代码</comment>
+			</column>
+		</property>
+		<property name="xqmc" type="java.lang.String">
+			<column name="xqmc" length="100">
+				<comment>校区名称</comment>
+			</column>
+		</property>
+		<property name="xqdz" type="java.lang.String">
+			<column name="xqdz" length="200">
+				<comment>校区地址</comment>
+			</column>
+		</property>
+		<property name="sfyx" type="java.lang.String">
+			<column name="sfyx" length="1">
+				<comment>是否有效</comment>
+			</column>
+		</property>
+		<property name="bz" type="java.lang.String">
+			<column name="bz" length="100">
+				<comment>备注</comment>
+			</column>
+		</property>
+		<property name="zdmj" type="java.lang.String">
+			<column name="zdmj" length="30">
+				<comment>占地面积(平方米)</comment>
+			</column>
+		</property>
+		<property name="lhydmj" type="java.lang.String">
+			<column name="lhydmj" length="30">
+				<comment>绿化用地面积(平方米)</comment>
+			</column>
+		</property>
+		<property name="swyxcd" type="java.lang.String">
+			<column name="swyxcd" length="30">
+				<comment>室外游戏场地(平方米)</comment>
+			</column>
+		</property>
+		<property name="tus" type="java.lang.String">
+			<column name="tus" length="30">
+				<comment>图书(册)</comment>
+			</column>
+		</property>
+		<property name="gdzczz" type="java.lang.String">
+			<column name="gdzczz" length="30">
+				<comment>固定资产总值(万元)</comment>
+			</column>
+		</property>
+		<property name="wjjzczz" type="java.lang.String">
+			<column name="wjjzczz" length="30">
+				<comment>玩教具资产值(万元)</comment>
+			</column>
+		</property>
+		 
+		<property name="syrzqc" type="java.lang.String">
+			<column name="syrzqc" length="30">
+				<comment>11人制足球场</comment>
+			</column>
+		</property>
+		<property name="qirzqc" type="java.lang.String">
+			<column name="qirzqc" length="30">
+				<comment>7人制足球场</comment>
+			</column>
+		</property>
+		<property name="wurzqc" type="java.lang.String">
+			<column name="wurzqc" length="30">
+				<comment>5人制足球场</comment>
+			</column>
+		</property>
+		
+		<property name="szzds" type="java.lang.String">
+			<column name="szzds" length="30">
+				<comment>数字终端数</comment>
+			</column>
+		</property>
+		
+		<property name="jszds" type="java.lang.String">
+			<column name="jszds" length="30">
+				<comment>教师终端数</comment>
+			</column>
+		</property>
+		
+		<property name="xszds" type="java.lang.String">
+			<column name="xszds" length="30">
+				<comment>学生终端数</comment>
+			</column>
+		</property>
+		
+		<property name="jssl" type="java.lang.String">
+			<column name="jssl" length="30">
+				<comment>教室数量</comment>
+			</column>
+		</property>
+		
+		<property name="wldmtjssl" type="java.lang.String">
+			<column name="wldmtjssl" length="30">
+				<comment>网络多媒体教室</comment>
+			</column>
+		</property>
+		
+		<property name="jxyqsbzcz" type="java.lang.String">
+			<column name="jxyqsbzcz" length="30">
+				<comment>教学仪器设备资产值</comment>
+			</column>
+		</property>
+	</class>
+</hibernate-mapping>

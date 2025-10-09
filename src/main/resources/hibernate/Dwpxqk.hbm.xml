@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="org.pfw.framework.ywmk.domain.Dwpxqk" table="t_ywmk_dwpxqk">
+		<comment>对外开展培训明细统计调查表（台账）</comment>
+		<id name="id" type="java.lang.String">
+			<column name="ID" length="32" />
+			<generator class="uuid.hex" />
+		</id> 
+		<property name="sjnf" type="java.lang.String">
+			<column name="sjnf" length="20">
+				<comment>数据年份</comment>
+			</column>
+		</property> 
+		<property name="pxxmmc" type="java.lang.String">
+			<column name="pxxmmc" length="100">
+				<comment>培训项目名称</comment>
+			</column>
+		</property> 
+		<property name="zyzjly" type="java.lang.String">
+			<column name="zyzjly" length="100">
+				<comment>主要资金来源类型  1：财政资金支付  2：非财政资金支付  3：免费公益项目</comment>
+			</column>
+		</property> 
+	 
+		<property name="dzjf" type="java.lang.String">
+			<column name="dzjf" length="20">
+				<comment>到账经费（万元）</comment>
+			</column>
+		</property> 
+		
+		<property name="pxsj" type="java.lang.String">
+			<column name="pxsj" length="20">
+				<comment>培训时间（学时）</comment>
+			</column>
+		</property> 
+		
+		<property name="pxxs" type="java.lang.String">
+			<column name="pxxs" length="100">
+				<comment>培训形式</comment>
+			</column>
+		</property> 
+		
+		<property name="qyzg" type="java.lang.String">
+			<column name="qyzg" length="20">
+				<comment>企业职工（人）</comment>
+			</column>
+		</property> 
+		<property name="dzldgb" type="java.lang.String">
+			<column name="dzldgb" length="20">
+				<comment>党政领导干部（人）</comment>
+			</column>
+		</property> 
+		<property name="jiaos" type="java.lang.String">
+			<column name="jiaos" length="20">
+				<comment>教师（人）</comment>
+			</column>
+		</property>  
+		<property name="ncldz" type="java.lang.String">
+			<column name="ncldz" length="20">
+				<comment>农村劳动者（人）</comment>
+			</column>
+		</property> 
+		<property name="zxxs" type="java.lang.String">
+			<column name="zxxs" length="20">
+				<comment>在校学生（人）</comment>
+			</column>
+		</property> 
+		<property name="lnr" type="java.lang.String">
+			<column name="lnr" length="20">
+				<comment>老年人（人）</comment>
+			</column>
+		</property> 
+		<property name="qita" type="java.lang.String">
+			<column name="qita" length="20">
+				<comment>其他（人）</comment>
+			</column>
+		</property> 
+		<property name="zdrq" type="java.lang.String">
+			<column name="zdrq" length="100">
+				<comment>重点人群</comment>
+			</column>
+		</property> 
+		<property name="tyjr" type="java.lang.String">
+			<column name="tyjr" length="20">
+				<comment>退役军人（人）</comment>
+			</column>
+		</property> 
+		<property name="cjr" type="java.lang.String">
+			<column name="cjr" length="20">
+				<comment>残疾人（人）</comment>
+			</column>
+		</property> 
+		<property name="xnjsxm" type="java.lang.String">
+			<column name="xnjsxm" length="20">
+				<comment>承担培训工作校内教师姓名</comment>
+			</column>
+		</property> 
+		<property name="wpry" type="java.lang.String">
+			<column name="wpry" length="20">
+				<comment>承担培训工作外聘人员姓名</comment>
+			</column>
+		</property> 
+		
+	</class>
+</hibernate-mapping>
