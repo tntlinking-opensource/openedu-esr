@@ -1,8 +1,51 @@
+# 平台介绍
+
+## 🏠【关于我们】
+
+![天天开源](https://open.tntlinking.com/assets/logo-b-BzFUYaRU.png) 
+
+天天开源致⼒于打造中国应⽤管理软件开源⽣态，⾯向医疗、企业、教育三⼤⾏业信息化需求，提供优质的开源软件产品与解决⽅案。平台现已发布OpenHIS、OpenCOM、OpenEDU系列开源产品，并持续招募⽣态合作伙伴，期待共同构建开源创新的⾏业协作模式，加速⾏业的数字化进程。
+
+天天开源的前⾝是新致开源，最早于2022年6⽉发布开源医疗软件平台OpenHIS.org.cn，于2023年6⽉发布开源企业软件平台OpenCOM.com.cn。2025年7⽉，新致开源品牌更新为天天开源，我们始终秉持开源、专业、协作的理念，致⼒于为医疗、教育、中⼩企业等⾏业提供优质的开源解决⽅案。
+
+了解我们：https://open.tntlinking.com/about?site=gitee
+
+## 💾【部署包下载】
+
+请访问官网产品中心下载部署包：https://open.tntlinking.com/resource/productCenter?site=gitee
+
+## 📚【支持文档】
+
+技术支持资源：https://open.tntlinking.com/resource/openProductDoc?site=gitee
+（含演示环境、操作手册、部署手册、开发手册、常见问题等）
+
+产品介绍：https://open.tntlinking.com/resource/productPresentation?site=gitee
+
+操作教程：https://open.tntlinking.com/resource/operationTutorial?site=gitee
+
+沙龙回顾：https://open.tntlinking.com/resource/openSourceSalon#23?site=gitee
+
+## 🤝【合作方式】
+
+产品服务价格：https://open.tntlinking.com/cost?site=gitee
+
+加入生态伙伴：https://open.tntlinking.com/ecology/becomePartner?site=gitee
+
+## 🤗【技术社区】
+
+请访问官网扫码加入技术社区交流：https://open.tntlinking.com/ecology/joinCommunity?site=gitee
+
+请关注公众号【天天开源软件】以便获得最新产品更新信息。
+
+
+
+# 项目介绍
+
 教育事业统计报表系统（openedu-esr）是一个用于教育事业统计报表的管理系统。以下是项目的结构和主要组件的概览：
 
-### 项目结构概览
+## 项目结构概览
 
-#### Java源代码
+### Java源代码
 - **com.ckfinder.connector.handlers.command**
   - `Aes.java`: 提供AES加密和解密功能。
   - `CheckoutFileType.java`: 检查文件类型，验证文件合法性。
@@ -47,7 +90,7 @@
 - **org.pfw.framework.ywmk.web**
   - 包含多个Action类，如`BbqzpzAction.java`, `BjxxAction.java`, `DictThreeAction.java`, `DictTwoAction.java`, `DwpxqkAction.java`, `JsskflqkAction.java`, `JzgxxAction.java`, `ReportCheckRuleAction.java`, `ReportInfoAction.java`, `ReportInfoRowFilterAction.java`, `SjrwAction.java`, `XiaoshexxAction.java`, `XsxxAction.java`, `XxbbxxAction.java`, `XxsslxAction.java`, `XxxqAction.java`, `XxxxAction.java`, `ZrjspxqkAction.java`, `ZyxxAction.java`等，处理Web请求。
 
-#### 资源文件
+### 资源文件
 - **ehcache**: 缓存配置文件。
 - **fckeditor.properties**, **freemarker.properties**: 配置文件。
 - **hibernate.cfg.xml**: Hibernate主配置文件。
@@ -59,7 +102,7 @@
 - **spring/*.xml**: Spring配置文件。
 - **ywmk/*.ftl**: Freemarker模板文件。
 
-#### Web应用资源
+### Web应用资源
 - **WEB-INF/web.xml**: Web应用部署描述符。
 - **WEB-INF/lib**: 包含项目依赖的JAR文件。
 - **WEB-INF/content**: 页面内容。
@@ -69,7 +112,7 @@
 - **extend/image**: 图片资源。
 - **index.jsp**, **login.jsp**, **main.jsp**: 主要页面。
 
-### 主要功能模块
+## 主要功能模块
 1. **数据管理**
    - 提供对教育事业统计数据的管理功能，包括班级信息、学生信息、教师信息、学校信息等。
    - 支持数据的增删改查操作。
@@ -101,7 +144,7 @@
    - 使用Freemarker模板引擎渲染页面。
    - 提供多种CSS样式和JavaScript功能，支持响应式设计和交互式操作。
 
-### 技术栈
+## 技术栈
 - **Java**: 项目主要使用Java编写。
 - **Struts2**: 用于处理Web请求。
 - **Spring**: 提供依赖注入和事务管理。
@@ -111,7 +154,7 @@
 - **MySQL/SQL Server**: 数据库支持。
 - **Bootstrap**: 前端框架，提供响应式设计和UI组件。
 
-### 依赖库
+## 依赖库
 - **Apache Commons**: 提供常用工具类。
 - **Hibernate**: ORM框架。
 - **Spring Framework**: 提供IoC和AOP支持。
@@ -120,5 +163,5 @@
 - **POI**: Excel操作支持。
 - **ZXing**: 二维码生成和读取。
 
-### 总结
+## 总结
 教育事业统计报表系统（openedu-esr）是一个基于Java的Web应用，使用Struts2、Spring、Hibernate等技术栈，提供教育事业统计数据的管理、报表生成、文件上传、数据导入导出等功能。系统支持多语言、缓存优化、安全防护等特性，适用于教育统计报表的管理场景。
